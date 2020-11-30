@@ -2,26 +2,24 @@ import java.util.Scanner;
 
 public class Substring {
     public int countSubstring(String a,String b){
-        if(b.length()==0 || a.length()==0){
-            return 0;
-        }
-        int count = 0;
-        int ch[] = new int[256];
-        for(int i=0;i<a.length();i++){
-            ch[a.charAt(i)]++;
-        }
-        boolean flag=true;
-        while(flag){
-            for(int i=0;i<b.length();i++){
-                if(ch[b.charAt(i)]==0){
-                    flag = false;
-                    break;
-                }
-                ch[b.charAt(i)]--;
-            }
-            count++;
-        }
-        return count-1;
+    int l1=a.length();
+	     int l2=b.length();
+	     int ch[]=new int[26];
+	     for(int i=0;i<l2;i++)
+	     ch[b.charAt(i)-'a']++;
+	     int count=0;
+	     for(int i=0;i<=(l1-l2);i++)
+	     {
+	         int ch2[]=new int[26];
+	         for(int j=0;j<l2;j++)
+	         ch2[a.charAt(i+j)-'a']++;
+	         
+	         if(Arrays.toString(ch).equals(Arrays.toString(ch2)))
+	         count++;
+	         
+	        
+	     }
+	     return count;
     }
     public static void main(String[] args) {
 
