@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class StringSort {
-    public StringBuilder sort(String s){
+   public String sort(String s){
         int n=s.length();
         char[] chars=s.toCharArray();
         for(int i=0;i<n-1;i++){
@@ -13,10 +13,9 @@ public class StringSort {
                 }
             }
         }
-        StringBuilder str=new StringBuilder();
-        for(int i=0;i<n;i++){
-            str.append(chars[i]);
-        }
+        String str=new String(chars);
+        
+        
         return str;
     }
     public static void main(String[] args) {
