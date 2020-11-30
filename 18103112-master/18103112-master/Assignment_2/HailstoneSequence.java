@@ -3,7 +3,7 @@ import java.util.*;
 public class HailstoneSequence {
     public void sequence(int n){
         if(n <= 0 || n>Integer.MAX_VALUE) {
-            throw new IllegalArgumentException("n should be a positive integer and less than Integer.MAX_VALUE");
+           System.out.println("n should be a positive integer and less than Integer.MAX_VALUE");
         }
         System.out.print(n + " ");
         while(n!=1){
